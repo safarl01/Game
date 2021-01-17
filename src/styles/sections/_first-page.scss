@@ -1,0 +1,168 @@
+.swiper-slide {
+    .swiper-header {
+        width: 100%;
+        padding: 20px 0 0 40px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+
+        img {
+            width: 100px;
+            object-fit: cover;
+        }
+
+        .swiper-buttons {
+            .frontpage-quicknav {
+                position: fixed;
+                top: 45px;
+                right: 130px;
+                display: block;
+                visibility: visible;
+
+                a {
+                    color: $color-two;
+
+                    @include m-none {
+                        display: none;
+                    }
+                }
+            }
+
+            .navbar-toggler {
+                width: 50px;
+                height: 50px;
+                position: fixed;
+                top: 45px;
+                right: 43px;
+                outline: 0;
+
+                .navbar-toggler-icon {
+                    position: absolute;
+                    left: 11px;
+                    top: 20px;
+                    height: 3px;
+                    width: 22px;
+                    background: $color-two;
+                    transition: all .25s ease-in-out;
+                }
+            }
+
+            .navbar-nav-dropdown {
+                position: fixed;
+                left: auto;
+                width: 0;
+                height: 0;
+                top: 45px;
+                right: 45px;
+                bottom: auto;
+                z-index: 1;
+                background: #000;
+                transition: all .3s ease-in-out;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -9px;
+                    right: -9px;
+                    width: 98%;
+                    height: 98%;
+                    border-right: 0 solid $color-two;
+                    border-bottom: 0 solid $color-two;
+                }
+
+                .navbar-nav {
+                    position: relative;
+                    height: 100%;
+                    width: 33.33333%;
+                    z-index: 10;
+                    opacity: 1;
+                    overflow: hidden;
+                    transition: all .25s ease-in-out;
+
+                    @include m-none {
+                        width: 100%;
+                    }
+
+                    .menu-item {
+                        position: relative;
+                        display: block;
+                        width: 100%;
+                        font-size: 20px;
+                        text-align: right;
+                        text-transform: lowercase;
+
+                        @include m-none {
+                            text-align: center;
+                        }
+
+                        .navLink {
+                            position: relative;
+                            display: inline-block;
+                            color: #fff;
+                            padding: 1rem;
+
+                            &::after {
+                                position: absolute;
+                                content: '';
+                                right: -15px;
+                                left: -15px;
+                                bottom: 15px;
+                                height: 4px;
+                                background: #fff;
+                                display: block;
+                                opacity: 0;
+                                transform: translate3d(25%, 0, 0);
+                                transition: all .35s ease;
+                            }
+
+                            &:hover {
+                                &::after {
+                                    opacity: 1;
+                                    transform: translate3d(0, 0, 0);
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .owl-carousel {
+
+        .owl-stage-outer,
+        .owl-stage,
+        .owl-item,
+        .item {
+            height: 100vh;
+        }
+
+        .item {
+            background-color: $color-two;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .owl-dots {
+            width: 100%;
+            margin-top: -30px !important;
+            position: absolute;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 20px 40px;
+            bottom: 20px;
+
+            .owl-dot {
+                span {
+                    background: $color-two;
+                }
+            }
+        }
+    }
+}

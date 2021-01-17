@@ -1,0 +1,24 @@
+.nav-link {
+    height: 50px;
+    width: 190px;
+    top: 45px;
+    z-index: 10;
+    padding: 10px 20px;
+    border: 3px solid $color-two;
+    background-color: transparent;
+    box-shadow: 7px 7px 0 $color-two;
+    transition: all .15s linear;
+    color: $color-two;
+    line-height: 24px;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    transform: translate3d(0, 0, 0);
+
+    &:hover {
+        background-color: transparent;
+        transform: translate3d(7px, 7px, 0);
+        box-shadow: 0 0 0 $color-two;
+        border-color: $color-two;
+    }
+}
