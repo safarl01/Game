@@ -21,7 +21,7 @@
                 visibility: visible;
 
                 a {
-                    color: $color-two;
+                    color: #fff;
 
                     @include m-none {
                         display: none;
@@ -43,7 +43,7 @@
                     top: 20px;
                     height: 3px;
                     width: 22px;
-                    background: $color-two;
+                    background: #fff;
                     transition: all .25s ease-in-out;
                 }
             }
@@ -67,8 +67,8 @@
                     right: -9px;
                     width: 98%;
                     height: 98%;
-                    border-right: 0 solid $color-two;
-                    border-bottom: 0 solid $color-two;
+                    border-right: 0 solid white;
+                    border-bottom: 0 solid white;
                 }
 
                 .navbar-nav {

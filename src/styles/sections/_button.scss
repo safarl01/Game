@@ -4,9 +4,9 @@
     top: 45px;
     z-index: 10;
     padding: 10px 20px;
-    border: 3px solid $color-two;
+    border: 3px solid white;
     background-color: transparent;
-    box-shadow: 7px 7px 0 $color-two;
+    box-shadow: 7px 7px 0 white;
     transition: all .15s linear;
     color: $color-two;
     line-height: 24px;
@@ -18,7 +18,7 @@
     &:hover {
         background-color: transparent;
         transform: translate3d(7px, 7px, 0);
-        box-shadow: 0 0 0 $color-two;
-        border-color: $color-two;
+        box-shadow: 0 0 0 white;
+        border-color: white;
     }
 }

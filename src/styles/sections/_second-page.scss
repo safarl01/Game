@@ -1,0 +1,117 @@
+.twin {
+    max-width: 100% !important;
+    background: $color-three;
+    background-image: url("/src/static/assets/landing-bckgrd-img.jpg");
+
+    .row {
+        height: 100%;
+    }
+
+    .memor {
+        margin: 0 !important;
+        padding: 0 !important;
+
+        .tw-hov {
+
+            .twins-first {
+                width: 50vw;
+                height: 100vh;
+                overflow: hidden;
+                background-color: $color-three;
+                clip-path: circle(30%);
+                transition: $transition;
+
+                @include owl-grid {
+                    clip-path: circle(20%);
+                }
+
+                .side_on {
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    background-color: rgba(0, 0, 0, 0.64);
+                    transition: $transition;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        clip-path: circle(30%);
+                        transition: $transition;
+
+                        @include owl-grid {
+                            clip-path: circle(20%);
+                        }
+                    }
+
+                    .twin-main {
+                        span {
+                            text-transform: uppercase;
+                            font-family: 'Potta One', cursive;
+                            font-size: 3em;
+                            color: #fff;
+
+                            @include owl-grid {
+                                font-size: 1.400em;
+                            }
+                        }
+
+                        .hidden-xs {
+                            display: block;
+                            font-weight: bold;
+                            position: relative;
+                            margin-top: 50px;
+                            left: -110%;
+                            transition: all 500ms linear;
+                            color: #fff;
+
+                            @include owl-grid {
+                                display: none;
+                            }
+
+                            &::before {
+                                content: "";
+                                width: 250px;
+                                height: 1px;
+                                background-color: #fff;
+                                position: absolute;
+                                left: 0;
+                                top: -20px;
+                            }
+
+                            &::after {
+                                content: "";
+                                width: 8px;
+                                height: 8px;
+                                background-color: #fff;
+                                position: absolute;
+                                left: 0;
+                                top: -20px;
+                            }
+                        }
+
+                    }
+                }
+
+                &:hover {
+                    clip-path: circle(100%);
+
+                    img {
+                        clip-path: circle(100%);
+                    }
+
+                    .side_on {
+                        background-color: rgba(0, 0, 0, 0.4);
+
+                        .hidden-xs {
+                            left: 0;
+                        }
+                    }
+
+                }
+
+            }
+        }
+    }
+}
